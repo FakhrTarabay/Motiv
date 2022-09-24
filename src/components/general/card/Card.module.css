@@ -1,0 +1,29 @@
+.Card, .card4, .card3, .card2, .card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 240px;
+  background-color: #242731;
+  border-radius: 14px;
+  padding: 30px 60px;
+  gap: 15px;
+  margin: 10px;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card1:hover {
+  background-color: #A162F7;
+}
+
+.card2:hover {
+  background-color: #FF7E86;
+}
+
+.card3:hover {
+  background-color: #A162F7;
+}
+
+.card4:hover {
+  background-color: #F6CC0D;
+}/*# sourceMappingURL=Card.module.css.map */

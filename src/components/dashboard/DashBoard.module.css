@@ -1,8 +1,21 @@
 .dashDiv {
+  height: 88vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.firstRow {
   display: flex;
-  flex-direction: column;
-  justify-content: none;
+  flex-direction: row;
+  justify-content: center;
   align-items: none;
-  margin: 30px;
-  flex-grow: 1;
+  gap: 10px;
+}
+
+.cardText {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  color: white;
 }/*# sourceMappingURL=DashBoard.module.css.map */

@@ -1,7 +1,17 @@
-@import '../sass/sass.scss';
+@import "../sass/sass.scss";
 
-.dashDiv{
-    @include flex(column,none,none);
-    margin: 30px;
-    flex-grow: 1;
+.dashDiv {
+  height: 88vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.firstRow {
+  @include flex(row, center, none);
+  gap: 10px;
+}
+
+.cardText {
+  @include font(24px, white, 700, 31px);
 }

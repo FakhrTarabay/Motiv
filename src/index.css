@@ -24,7 +24,4 @@ code {
 
 html {
   background: #1F2128;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }

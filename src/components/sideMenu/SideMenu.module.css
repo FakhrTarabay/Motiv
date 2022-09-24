@@ -36,6 +36,7 @@
   line-height: 18px;
   font-weight: 500;
   color: white;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .menuItem:hover {
   background-color: #292e3d;
