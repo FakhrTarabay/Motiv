@@ -1,0 +1,8 @@
+.dashDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  margin: 30px;
+  flex-grow: 1;
+}/*# sourceMappingURL=DashBoard.module.css.map */

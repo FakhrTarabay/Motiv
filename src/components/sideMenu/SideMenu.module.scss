@@ -1,0 +1,28 @@
+@import "../sass/sass.scss";
+
+.SideMenu {
+  background-color: #242731;
+  @include flex(column, flex-start, flex-start);
+  padding: 30px 24px;
+  gap: 3px;
+}
+
+.logo {
+  @include flex(row, center, center);
+  margin-bottom: 30px;
+}
+.title {
+  @include font(24px, white, 700, 31px);
+  margin-left: 12px;
+}
+.menuItem {
+  @include flex(row, flex-start, center);
+  border-radius: 6px;
+  gap: 7px;
+  padding: 10px 90px 11px 9px;
+  @include font(14px, white, 500, 18px);
+
+  &:hover {
+    background-color: #292e3d;
+  }
+}

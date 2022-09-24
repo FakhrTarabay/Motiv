@@ -1,0 +1,7 @@
+@import '../sass/sass.scss';
+
+.dashDiv{
+    @include flex(column,none,none);
+    margin: 30px;
+    flex-grow: 1;
+}
