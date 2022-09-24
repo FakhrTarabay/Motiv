@@ -1,0 +1,14 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  padding: 30px;
+  width: 40%;
+}
+.div h1 {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: bold;
+  color: #ffffff;
+}/*# sourceMappingURL=LoginSignUp.module.css.map */

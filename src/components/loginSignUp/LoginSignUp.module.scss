@@ -1,0 +1,11 @@
+@import "../sass/sass.scss";
+.div {
+  @include flex(column, none, none);
+  padding: 30px;
+  width: 40%;
+  h1 {
+    @include font(30px, #ffffff, bold, 39px);
+  }
+}
+
+
