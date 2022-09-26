@@ -16,14 +16,19 @@
   color: white;
 }
 
-.row, .rowS {
+.row, .rowA, .rowS {
   display: flex;
   flex-direction: row;
   gap: 2%;
 }
 
 .rowS {
-  gap: 12%;
+  gap: 22%;
+}
+
+.rowA {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .col {
@@ -33,17 +38,15 @@
 }
 
 .carPic {
-  width: 80%;
-  position: relative;
-  left: 11%;
-  top: 20%;
+  align-self: center;
 }
 
 .sTextW {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 500;
   color: white;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .sTextG {
@@ -51,4 +54,48 @@
   line-height: 21px;
   font-weight: 500;
   color: #808191;
+}
+
+.charText {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chartBtn {
+  background-color: transparent;
+  border-radius: 7px;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #7C7C8D;
+}
+.chartBtn:hover {
+  background-color: rgba(255, 255, 255, 0.099);
+}
+
+.chartBtnRow {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+
+.firstRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  gap: 20px;
 }/*# sourceMappingURL=Assets.module.css.map */

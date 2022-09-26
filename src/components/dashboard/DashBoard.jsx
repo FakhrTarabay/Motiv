@@ -49,7 +49,6 @@ const DashBoard = () => {
               <button className={css.chartBtn}>Month</button>
             </span>
           </span>
-
           <BarGraph />
         </Card>
         <Card color="#242731" bgColor="#242731" maxW="49%" jusC="space-between">
@@ -61,7 +60,7 @@ const DashBoard = () => {
               <button className={css.chartBtn}>Month</button>
             </span>
           </span>
-          <LineChart />
+          <LineChart bColor="rgba(255, 118, 76, 1)" bgColor="rgba(255, 118, 76, 0.5)"/>
         </Card>
       </div>
       <div className={css.firstRow}>

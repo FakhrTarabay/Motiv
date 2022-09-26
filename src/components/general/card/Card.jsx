@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import css from "./Card.module.css";
-const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, gap }) => {
+const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, gap, bShadow }) => {
   const [hover, setHover] = useState(false);
   return (
     <div
@@ -15,7 +15,8 @@ const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, g
         maxWidth: maxW,
         alignItems: aItems,
         justifyContent: jusC,
-        flexGrow:grow
+        flexGrow:grow,
+        boxShadow:bShadow
       }}
     >
       {children}

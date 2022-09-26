@@ -20,26 +20,62 @@
   flex-direction: row;
   gap: 2%;
 }
-.rowS{
+.rowS {
   @extend .row;
-  gap:12%;
+  gap: 22%;
 }
-.col{
-    display: flex;
-    flex-direction: column;
-    gap:4px;
+
+.rowA{
+  @extend .row;
+  justify-content: space-between;
+  align-items: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .carPic {
-    width: 80%;
-    position: relative;
-    left: 11%;
-    top: 20%;
+  align-self: center;
 }
 
-.sTextW{
-  @include font(20px, white, 700, 26px);
+.sTextW {
+  @include font(13px, white, 500, 17px);
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-.sTextG{
-    @include font(16px, #808191, 500, 21px);
+.sTextG {
+  @include font(16px, #808191, 500, 21px);
+}
+
+.charText {
+  @include font(20px, #ffffff, 700, 26px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chartBtn {
+  background-color: transparent;
+  border-radius: 7px;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  @include font(12px, #7C7C8D, 500, 16px);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.099);
   }
+}
+
+.chartBtnRow {
+  margin: 10px 0px;
+  @include flex(row, flex-start, center);
+  gap: 18px;
+}
+
+.firstRow {
+  @include flex(row, center, none);
+  gap: 20px;
+}

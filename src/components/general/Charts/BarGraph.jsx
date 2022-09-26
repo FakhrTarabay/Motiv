@@ -34,7 +34,7 @@ const BarGraph = () => {
       {
         label: "Dataset 1",
         data: [134, 173,112, 190, 134, 219, 163],
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        backgroundColor: "#2884FF",
       },
     ],
   };

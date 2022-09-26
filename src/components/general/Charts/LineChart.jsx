@@ -23,9 +23,14 @@ ChartJS.register(
   Legend
 );
 
-const LineChart = () => {
+const LineChart = ({bgColor,bColor}) => {
   const options = {
     responsive: true,
+    elements: {
+      point: {
+        radius: 3,
+      },
+    },
     plugins: {
       legend: false,
     },
@@ -45,12 +50,12 @@ const LineChart = () => {
     labels,
     datasets: [
       {
-        lineTension: 0.6,
+        lineTension: 0.4,
         fill: true,
         label: "Dataset 1",
         data: [134, 173, 112, 190, 134, 219, 163],
-        borderColor: "rgba(255, 118, 76, 1)",
-        backgroundColor: "rgba(255, 118, 76, 0.5)",
+        borderColor: bColor,
+        backgroundColor: bgColor,
       },
     ],
   };
