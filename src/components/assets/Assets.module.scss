@@ -1,0 +1,45 @@
+@import "../sass/sass.scss";
+
+.assetsDiv {
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  padding: 30px;
+  gap: 24px;
+}
+
+.title {
+  @include font(30px, white, 700, 39px);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+.rowS{
+  @extend .row;
+  gap:12%;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+}
+
+.carPic {
+    width: 80%;
+    position: relative;
+    left: 11%;
+    top: 20%;
+}
+
+.sTextW{
+  @include font(20px, white, 700, 26px);
+}
+.sTextG{
+    @include font(16px, #808191, 500, 21px);
+  }

@@ -9,7 +9,7 @@ const Title = ({ isUp, setIsuP }) => {
         <span className={css.reg}>
           Already have an account?
           <span className={css.med}>
-            <a className={css.a} onClick={() => setIsuP(!isUp)}>
+            <a href="#temp" className={css.a} onClick={() => setIsuP(!isUp)}>
               {" "}
               Sign in
             </a>
@@ -19,7 +19,7 @@ const Title = ({ isUp, setIsuP }) => {
         <span className={css.reg}>
           Don't have an account?
           <span className={css.med}>
-            <a className={css.a} onClick={() => setIsuP(!isUp)}>
+            <a href="#temp" className={css.a} onClick={() => setIsuP(!isUp)}>
               {" "}
               Sign up
             </a>

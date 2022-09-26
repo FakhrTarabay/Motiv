@@ -8,6 +8,15 @@
   gap: 3px;
 }
 
+.btn {
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: white;
+  border: none;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -32,10 +41,6 @@
   border-radius: 6px;
   gap: 7px;
   padding: 10px 90px 11px 9px;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  color: white;
   transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .menuItem:hover {

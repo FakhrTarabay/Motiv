@@ -11,7 +11,8 @@ function ProgressX(props) {
         variant="determinate"
         {...props}
         sx={{
-          color: "#FF7E86",
+          "&:hover":{color:props.color},
+          color: "white",
           width: "100px!important",
           height: "100px!important",
         }}
@@ -48,6 +49,7 @@ Progress.propTypes = {
 };
 
 export default function Progress({ value }) {
+  // eslint-disable-next-line
   const [progress, setProgress] = React.useState(value);
   return <ProgressX value={progress} />;
 }

@@ -6,6 +6,11 @@
   padding: 30px 24px;
   gap: 3px;
 }
+.btn{
+  background-color: transparent;
+  @include font(14px, white, 500, 18px);
+  border: none;
+}
 
 .logo {
   @include flex(row, center, center);
@@ -20,7 +25,6 @@
   border-radius: 6px;
   gap: 7px;
   padding: 10px 90px 11px 9px;
-  @include font(14px, white, 500, 18px);
   transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   &:hover {
     background-color: #292e3d;

@@ -1,11 +1,26 @@
-import React from 'react'
-import css from './Card.module.css'
-const Card = ({children}) => {
+import React, { useState } from "react";
+import css from "./Card.module.css";
+const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, gap }) => {
+  const [hover, setHover] = useState(false);
   return (
-    <div className={css.card2}>
-        {children}
+    <div
+      className={css.Card}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        gap:gap,
+        padding:pad,
+        backgroundColor: hover ? color : bgColor,
+        maxHeight: maxH,
+        maxWidth: maxW,
+        alignItems: aItems,
+        justifyContent: jusC,
+        flexGrow:grow
+      }}
+    >
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

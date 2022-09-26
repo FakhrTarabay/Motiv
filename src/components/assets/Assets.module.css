@@ -1,0 +1,54 @@
+.assetsDiv {
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  padding: 30px;
+  gap: 24px;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  color: white;
+}
+
+.row, .rowS {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.rowS {
+  gap: 12%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.carPic {
+  width: 80%;
+  position: relative;
+  left: 11%;
+  top: 20%;
+}
+
+.sTextW {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.sTextG {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #808191;
+}/*# sourceMappingURL=Assets.module.css.map */

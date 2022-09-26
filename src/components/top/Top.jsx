@@ -9,11 +9,11 @@ const Top = () => {
   return (
     <div className={css.divTop}>
       <div className={css.begin}>
-        <a className={css.search}>
-          <img src={search} />
+        <a href="#temp" className={css.search}>
+          <img alt="ico" src={search} />
         </a>
-        <a className={css.search}>
-          <img src={rect} />
+        <a href="#temp" className={css.search}>
+          <img alt="ico" src={rect} />
         </a>
         <input
           className={css.searchBar}
@@ -22,10 +22,10 @@ const Top = () => {
         ></input>
       </div>
       <div className={css.end}>
-        <a className={css.notif}>
-          <img src={notif} alt="notif" />
+        <a href="#temp" className={css.notif}>
+          <img src={notif} alt="notif"/>
         </a>
-        <a className={css.avatar}>
+        <a href="#temp" className={css.avatar}>
           <Avatar
             alt="Remy Sharp"
             src="/static/images/avatar/1.jpg"

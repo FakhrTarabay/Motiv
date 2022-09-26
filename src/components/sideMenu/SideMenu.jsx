@@ -14,42 +14,41 @@ const SideMenu = () => {
   return (
     <div className={css.SideMenu}>
       <div className={css.logo}>
-        <img src={motiv} />
+        <img alt="ico" src={motiv} />
         <span className={css.title}>Motiv.</span>
       </div>
       <div className={css.menuItem}>
-        <img src={db} />
-        <a>Dashboard</a>
+        <img alt="ico" src={db} />
+        <button className={css.btn}>Dashboard</button>
       </div>
       <div className={css.menuItem}>
-        <img src={assets} />
-        <a>Assets</a>
+        <img alt="ico" src={assets} />
+        <button className={css.btn}>Assets</button>
       </div>
       <div className={css.menuItem}>
-        <img src={car} />
-        <a>Booking</a>
+        <img alt="ico" src={car} />
+        <button className={css.btn}>Booking</button>
       </div>
       <div className={css.menuItem}>
-        <img src={bag} />
-        <a>Sell Cars</a>
+        <img alt="ico" src={bag} />
+        <button className={css.btn}>Sell Cars</button>
       </div>
       <div className={css.menuItem}>
-        <img src={cart} />
-        <a>Buy Cars</a>
+        <img alt="ico" src={cart} />
+        <button className={css.btn}>Buy Cars</button>
       </div>
       <div className={css.menuItem}>
-        <img src={fencing} />
-        <a>Services</a>
+        <img alt="ico" src={fencing} />
+        <button className={css.btn}>Services</button>
       </div>
       <div className={css.menuItem}>
-        <img src={calen} />
-        <a>Calender</a>
+        <img alt="ico" src={calen} />
+        <button className={css.btn}>Calender</button>
       </div>
       <div className={css.menuItem}>
-        <img src={msg} />
-        <a>Messages</a>
+        <img alt="ico" src={msg} />
+        <button className={css.btn}>Messages</button>
       </div>
-      
     </div>
   );
 };
