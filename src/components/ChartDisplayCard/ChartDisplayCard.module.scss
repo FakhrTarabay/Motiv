@@ -1,0 +1,5 @@
+@import "../sass/sass.scss";
+
+.charText {
+    @include font(20px, #FFFFFF, 700, 26px);
+}

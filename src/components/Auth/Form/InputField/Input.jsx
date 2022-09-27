@@ -1,9 +1,9 @@
 import React from "react";
-import css from "./Input.module.scss";
+import Style from "./Input.module.scss";
 
 const Input = ({ isUp }) => {
   return (
-    <div className={css.bg}>
+    <div className={Style.bg}>
       {isUp && (
         <>
           <label htmlFor="fName">First Name</label>

@@ -1,13 +1,13 @@
 import React from 'react'
-import css from '../Pages/Pages.module.scss'
+import Style from '../Pages/Pages.module.scss'
 import DashBoard from '../components/Dashboard/Dashboard'
 import Top from '../components/Top/Top'
 import SideMenu from '../components/SideMenu/SideMenu'
 const STD = () => {
     return (
-        <div className={css.App}>
+        <div className={Style.App}>
             <SideMenu />
-            <div className={css.rest}>
+            <div className={Style.rest}>
                 <Top />
                 <DashBoard />
             </div>

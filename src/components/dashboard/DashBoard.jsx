@@ -1,123 +1,32 @@
 import React from "react";
-import css from "./Dashboard.module.scss";
-import Card from "../General/Card/Card";
+import Style from "./Dashboard.module.scss";
 import light from "../svg/light.svg";
 import arrow from "../svg/arrow.svg";
 import coin from "../svg/coin.svg";
 import oil from "../svg/oil.svg";
-import carIcon from "../svg/carIcon.svg";
-import arrowC from "../svg/arrowC.svg";
-import carSettings from "../svg/carSettings.svg";
-import carBolt from "../svg/carBolt.svg";
 import car from "../svg/car2.svg";
-import BarGraph from "../General/Charts/BarGraph";
-import Progress from "../MUI/Progress";
-import LineChart from "../General/Charts/LineChart";
 import { useSelector } from 'react-redux'
-
+import DataCard from "./DataCards/DataCard";
+import CarDisplayCard from "../CarDisplayCard/CarDisplayCard";
+import ChartDisplayCard from "../ChartDisplayCard/ChartDisplayCard";
 const DashBoard = () => {
   const data = useSelector((state) => state.userData)
   return (
-    <div className={css.dashDiv}>
-      <div className={css.firstRow}>
-        <Card color="#A162F7" bgColor="#242731" aItems="center">
-          <img alt="pic" src={light} />
-          <span className={css.cardText}>Energy</span>
-          <Progress value={data.energy} />
-        </Card>{" "}
-        <Card color="#FF7E86" bgColor="#242731" aItems="center">
-          <img alt="pic" src={arrow} />
-          <span className={css.cardText}>Range</span>
-          <Progress value={data.range} color="white" />
-        </Card>{" "}
-        <Card color="#A16295" bgColor="#242731" aItems="center">
-          <img alt="pic" src={oil} />
-          <span className={css.cardText}>Fluid</span>
-          <Progress value={data.fluid} />
-        </Card>{" "}
-        <Card color="#F6CC0D" bgColor="#242731" aItems="center">
-          <img alt="pic" src={coin} />
-          <span className={css.cardText}>Tire Wear</span>
-          <Progress value={data.tireWear} />
-        </Card>
+    <div className={Style.dashDiv}>
+      <div className={Style.Row}>
+        <DataCard color="#A162F7" bgColor="#242731" aItems="center" text="Energy" data={data.energy} imgSrc={light} />
+        <DataCard color="#FF7E86" bgColor="#242731" aItems="center" text="Range" data={data.range} imgSrc={arrow} />
+        <DataCard color="#A16295" bgColor="#242731" aItems="center" text="Fluid" data={data.fluid} imgSrc={oil} />
+        <DataCard color="#F6CC0D" bgColor="#242731" aItems="center" text="Tire Wear" data={data.tireWear} imgSrc={coin} />
       </div>
-      <div className={css.firstRow}>
-        <Card color="#242731" bgColor="#242731" maxW="49%" jusC="space-between">
-          <span className={css.charText}>
-            Mile Statistics
-            <span className={css.chartBtnRow}>
-              <button className={css.chartBtn}>Day</button>
-              <button className={css.chartBtn}>Week</button>
-              <button className={css.chartBtn}>Month</button>
-            </span>
-          </span>
-          <BarGraph dataX={data.barChartData} />
-        </Card>
-        <Card color="#242731" bgColor="#242731" maxW="49%" jusC="space-between">
-          <span className={css.charText}>
-            Car Statistics
-            <span className={css.chartBtnRow}>
-              <button className={css.chartBtn}>Day</button>
-              <button className={css.chartBtn}>Week</button>
-              <button className={css.chartBtn}>Month</button>
-            </span>
-          </span>
-          <LineChart bColor="rgba(255, 118, 76, 1)" bgColor="rgba(255, 118, 76, 0.5)" dataX={data.lineChartData} />
-        </Card>
+      <div className={Style.Row}>
+        <ChartDisplayCard data={data.barChartData} type="bar" title="Mile Statistics"/>
+        <ChartDisplayCard data={data.lineChartData} type="line" title="Car Statistics"/>
       </div>
-      <div className={css.firstRow}>
-        <Card bgColor="#E1DFA4" color="#E1DFA4" aItems="flex-start">
-          <span className={css.carText}>
-            <img src={carIcon} alt="ico" />
-            64% recommend
-          </span>
-          <img width="100%" alt="pic" src={car} />
-          <span className={css.carTextB}>Mini Cooper</span>
-          <div className={css.carText}>
-            <span className={css.carText}>
-              <img src={arrowC} alt="ico" />
-              <span className={css.carSText}>132K</span>
-              <img src={carSettings} alt="ico" />
-              <img src={carBolt} alt="ico" />
-            </span>
-            <span className={css.carSText}>$32/h</span>
-          </div>
-        </Card>
-        <Card bgColor="#E3ECF1" color="#E3ECF1" aItems="flex-start">
-          <span className={css.carText}>
-            <img src={carIcon} alt="ico" />
-            64% recommend
-          </span>
-          <img width="100%" alt="pic" src={car} />
-          <span className={css.carTextB}>Mini Cooper</span>
-          <div className={css.carText}>
-            <span className={css.carText}>
-              <img src={arrowC} alt="ico" />
-              <span className={css.carSText}>132K</span>
-              <img src={carSettings} alt="ico" />
-              <img src={carBolt} alt="ico" />
-            </span>
-            <span className={css.carSText}>$32/h</span>
-          </div>
-        </Card>
-
-        <Card bgColor="#F4E3E5" color="#F4E3E5" aItems="flex-start">
-          <span className={css.carText}>
-            <img src={carIcon} alt="ico" />
-            64% recommend
-          </span>
-          <img width="100%" alt="pic" src={car} />
-          <span className={css.carTextB}>Mini Cooper</span>
-          <div className={css.carText}>
-            <span className={css.carText}>
-              <img src={arrowC} alt="ico" />
-              <span className={css.carSText}>132K</span>
-              <img src={carSettings} alt="ico" />
-              <img src={carBolt} alt="ico" />
-            </span>
-            <span className={css.carSText}>$32/h</span>
-          </div>
-        </Card>
+      <div className={Style.Row}>
+        <CarDisplayCard data={{name:"Mini Cooper",kms:"132k",rate:"$32/h",percentage:"63%"}} imgSrc={car} bgColor="#E1DFA4"/>
+        <CarDisplayCard data={{name:"Mini Cooper",kms:"132k",rate:"$32/h",percentage:"63%"}} imgSrc={car} bgColor="#E3ECF1"/>
+        <CarDisplayCard data={{name:"Mini Cooper",kms:"132k",rate:"$32/h",percentage:"63%"}} imgSrc={car} bgColor="#F4E3E5"/>
       </div>
     </div>
   );

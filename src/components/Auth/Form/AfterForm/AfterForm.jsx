@@ -1,11 +1,11 @@
 import React from "react";
-import css from "./AfterForm.module.scss";
+import Style from "./AfterForm.module.scss";
 import Checkbox from "@mui/material/Checkbox";
 
 const AfterForm = () => {
   return (
-    <div className={css.afterForm}>
-      <div className={css.rem}>
+    <div className={Style.afterForm}>
+      <div className={Style.rem}>
         <Checkbox
           id="remember"
           sx={{

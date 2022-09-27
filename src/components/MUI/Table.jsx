@@ -5,7 +5,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import css from './Table.module.scss'
+import Style from './Table.module.scss'
 
 
 export default function BasicTable({colTitles,rows}) {
@@ -15,7 +15,7 @@ export default function BasicTable({colTitles,rows}) {
                 <TableHead>
                     <TableRow>
                         {colTitles.map(title => {
-                            return <TableCell ><span className={css.tableCol}>{title}</span></TableCell>
+                            return <TableCell ><span className={Style.tableCol}>{title}</span></TableCell>
                         })}
                     </TableRow>
                 </TableHead>
@@ -26,7 +26,7 @@ export default function BasicTable({colTitles,rows}) {
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             {row.map(value => {
-                                return <TableCell><span className={css.tableItem}>{value}</span></TableCell>
+                                return <TableCell><span className={Style.tableItem}>{value}</span></TableCell>
                             })}
                         </TableRow>
                     ))}

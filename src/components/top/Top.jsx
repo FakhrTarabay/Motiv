@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./Top.module.scss";
+import Style from "./Top.module.scss";
 import Avatar from "@mui/material/Avatar";
 import notif from "../svg/notification.svg";
 import search from "../svg/search.svg";
@@ -7,25 +7,25 @@ import rect from "../svg/rect.svg";
 
 const Top = () => {
   return (
-    <div className={css.divTop}>
-      <div className={css.begin}>
-        <a href="#temp" className={css.search}>
+    <div className={Style.divTop}>
+      <div className={Style.begin}>
+        <a href="#temp" className={Style.search}>
           <img alt="ico" src={search} />
         </a>
-        <a href="#temp" className={css.search}>
+        <a href="#temp" className={Style.search}>
           <img alt="ico" src={rect} />
         </a>
         <input
-          className={css.searchBar}
+          className={Style.searchBar}
           type={"search"}
           placeholder="search or type..."
         ></input>
       </div>
-      <div className={css.end}>
-        <a href="#temp" className={css.notif}>
+      <div className={Style.end}>
+        <a href="#temp" className={Style.notif}>
           <img src={notif} alt="notif"/>
         </a>
-        <a href="#temp" className={css.avatar}>
+        <a href="#temp" className={Style.avatar}>
           <Avatar
             alt="Remy Sharp"
             src="/static/images/avatar/1.jpg"

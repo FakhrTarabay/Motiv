@@ -1,6 +1,6 @@
 import React from "react";
 import Divider from "@mui/material/Divider";
-import css from './Divider.module.scss'
+import Style from './Divider.module.scss'
 const DividerX = () => {
   return (
     <Divider
@@ -11,7 +11,7 @@ const DividerX = () => {
         },
       }}
     >
-      <span className={css.dividerOr}>or</span>
+      <span className={Style.dividerOr}>or</span>
     </Divider>
   );
 };

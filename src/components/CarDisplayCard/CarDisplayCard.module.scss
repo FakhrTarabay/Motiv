@@ -1,0 +1,18 @@
+@import "../sass/sass.scss";
+
+
+.carText {
+    @include flex(row, flex-start, center);
+    @include font(16px, #242731, 700, 21px);
+    width: 100%;
+    gap: 10px;
+}
+
+.carSText {
+    @include font(14px, #72767C, 500, 18px);
+}
+
+.carTextB {
+    @include font(20px, #1F2128, 700, 26.04px);
+
+}
