@@ -1,19 +1,11 @@
 @import "../sass/sass.scss";
 
 .dashDiv {
-  display: flex;
-  flex-direction: column;
-  height: 88vh;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-  padding: 20px 0px;
-  gap: 20px;
+  @include rest;
 }
 
 .Row {
-  @include flex(row, center, none);
-  padding: 0px 20px;
+  @include flex(row, center, normal);
   gap: 20px;
 }
 

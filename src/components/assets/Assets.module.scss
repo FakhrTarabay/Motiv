@@ -1,14 +1,7 @@
 @import "../sass/sass.scss";
 
 .assetsDiv {
-  display: flex;
-  flex-direction: column;
-  height: 88vh;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-  padding: 30px;
-  gap: 24px;
+  @include rest;
 }
 
 .title {

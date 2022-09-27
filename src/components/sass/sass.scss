@@ -11,3 +11,14 @@
     justify-content: $jus;
     align-items: $align;
 }
+
+@mixin rest{
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    padding: 20px;
+    gap: 24px;
+}

@@ -8,7 +8,7 @@ import ChartBtns from "./ChartBtns/ChartBtns";
 
 const ChartDisplayCard = ({type,title,data}) => {
     return (
-        <Card color="#242731" bgColor="#242731" maxW="49%" jusC="space-between">
+        <Card color="#242731" bgColor="#242731" jusC="space-between">
             <span className={Style.charText}>
                 {title}
                 <ChartBtns btns={["Day", "Week", "Month"]} />
