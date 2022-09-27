@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./Top.module.css";
+import css from "./Top.module.scss";
 import Avatar from "@mui/material/Avatar";
 import notif from "../svg/notification.svg";
 import search from "../svg/search.svg";

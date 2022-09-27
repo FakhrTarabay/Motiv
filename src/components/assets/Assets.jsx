@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import css from "./Assets.module.css";
-import Card from "../general/card/Card";
+import css from "./Assets.module.scss";
+import Card from "../General/Card/Card";
 import car from "../svg/car3.svg";
 import Divider from "@mui/material/Divider";
-import LineChart from "../general/Charts/LineChart";
+import LineChart from "../General/Charts/LineChart";
 import caution from "../svg/caution.svg";
 import wrench from "../svg/wrench.svg";
 import msg from "../svg/msg2.svg";
 import analyze from "../svg/analyze.svg";
-
 import Checkbox from "@mui/material/Checkbox";
-
+import { useSelector } from 'react-redux'
+import BasicTable from '../MUI/Table'
 const Assets = () => {
+  const rows =[
+    ['Urgent Safety Recall',"06/04/2022","08/04/2022","David Demo","Completed"],
+    ['Urgent Safety Recall',"06/04/2022","08/04/2022","David Demo","Completed"],
+];
+const cols = ["Description","Due","Overdue","Notify","Status"]
+  const data = useSelector(state=>state.userData)
   const [conds, setconds] = useState({
     ten: false,
     km: false,
@@ -58,7 +64,7 @@ const Assets = () => {
               <span className={css.sTextW}>$5.2K</span>
             </span>
           </div>
-          <img className={css.carPic} src={car} />
+          <img alt="ico" className={css.carPic} src={car} />
         </Card>
         <Card
           bgColor="transparent"
@@ -78,7 +84,7 @@ const Assets = () => {
               Activity
               <button className={css.chartBtn}>View All</button>
             </span>
-            <LineChart bColor="#8668E1" bgColor="#8668E126" />
+            <LineChart bColor="#8668E1" bgColor="#8668E126" dataX={data.AssetsLineChart} />
           </Card>
           <div className={css.firstRow}>
             <Card color="#242731" bgColor="#242731" maxW="49%" bShadow="none">
@@ -88,14 +94,14 @@ const Assets = () => {
                 sx={{ backgroundColor: "#333642", borderWidth: "2px" }}
               />
               <span className={css.rowA}>
-                <img src={msg} />
+                <img alt="ico" src={msg} />
                 <span className={css.col}>
                   <span className={css.sTextW}>Monday, 6th Apirl 2020</span>
                   <span className={css.sTextG}>Book for General Service</span>
                 </span>
               </span>
               <span className={css.rowA}>
-                <img src={caution} />
+                <img alt="ico" src={caution} />
                 <span className={css.col}>
                   <span className={css.sTextW}>
                     Thursday, 24th October 2021
@@ -106,7 +112,7 @@ const Assets = () => {
                 </span>
               </span>
               <span className={css.rowA}>
-                <img src={wrench} />
+                <img alt="ico" src={wrench} />
                 <span className={css.col}>
                   <span className={css.sTextW}>Monday, 13th August 2018</span>
                   <span className={css.sTextG}>
@@ -148,7 +154,7 @@ const Assets = () => {
                     Asset - Fuel Consumed (10)
                   </span>
                 </span>
-                <img
+                <img alt="ico"
                   src={analyze}
                   style={
                     conds.ten
@@ -178,7 +184,7 @@ const Assets = () => {
                     Asset - Odometer (km)
                   </span>
                 </span>
-                <img
+                <img alt="ico"
                   src={analyze}
                   style={
                     conds.km
@@ -208,7 +214,7 @@ const Assets = () => {
                     Asset - Runtime (km)
                   </span>
                 </span>
-                <img
+                <img alt="ico"
                   src={analyze}
                   style={
                     conds.kmm
@@ -238,7 +244,7 @@ const Assets = () => {
                     Asset - Speed (hr)
                   </span>
                 </span>
-                <img
+                <img alt="ico"
                   src={analyze}
                   style={
                     conds.hr
@@ -268,7 +274,7 @@ const Assets = () => {
                     Engine Temperature (deg C)
                   </span>
                 </span>
-                <img
+                <img alt="ico"
                   src={analyze}
                   style={
                     conds.c
@@ -284,8 +290,8 @@ const Assets = () => {
             </Card>
           </div>
           <Card bgColor="#242731" color="#242731" bShadow="none">
-              <span className={css.charText}>Reminder</span>
-                  
+              <span className={css.charText}>Reminder </span>
+              <BasicTable colTitles={cols} rows={rows}/>
           </Card>
         </Card>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./SideMenu.module.css";
+import css from "./SideMenu.module.scss";
 import motiv from "../svg/motiv.svg";
 import db from "../svg/db.svg";
 import assets from "../svg/assets.svg";

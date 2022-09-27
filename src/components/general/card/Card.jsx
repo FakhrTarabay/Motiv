@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import css from "./Card.module.css";
+import css from "./Card.module.scss";
 const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, gap, bShadow }) => {
   const [hover, setHover] = useState(false);
   return (

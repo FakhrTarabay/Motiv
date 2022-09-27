@@ -1,23 +1,23 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-  );
-const BarGraph = () => {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+const BarGraph = ({ dataX }) => {
   const labels = [
     "1 PM",
     "2 PM",
@@ -32,8 +32,7 @@ const BarGraph = () => {
     labels,
     datasets: [
       {
-        label: "Dataset 1",
-        data: [134, 173,112, 190, 134, 219, 163],
+        data: dataX,
         backgroundColor: "#2884FF",
       },
     ],
@@ -41,10 +40,10 @@ const BarGraph = () => {
   const options = {
     responsive: true,
     plugins: {
-      legend:false,
+      legend: false,
     }
   };
-  return <Bar data={data} options={options} width="200px"/>;
+  return <Bar data={data} options={options} width="200px" />;
 };
 
 export default BarGraph;

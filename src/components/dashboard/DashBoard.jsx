@@ -1,6 +1,6 @@
 import React from "react";
-import css from "./DashBoard.module.css";
-import Card from "../general/card/Card";
+import css from "./Dashboard.module.scss";
+import Card from "../General/Card/Card";
 import light from "../svg/light.svg";
 import arrow from "../svg/arrow.svg";
 import coin from "../svg/coin.svg";
@@ -10,33 +10,35 @@ import arrowC from "../svg/arrowC.svg";
 import carSettings from "../svg/carSettings.svg";
 import carBolt from "../svg/carBolt.svg";
 import car from "../svg/car2.svg";
-import BarGraph from "../general/Charts/BarGraph";
+import BarGraph from "../General/Charts/BarGraph";
 import Progress from "../MUI/Progress";
-import LineChart from "../general/Charts/LineChart";
+import LineChart from "../General/Charts/LineChart";
+import { useSelector } from 'react-redux'
 
 const DashBoard = () => {
+  const data = useSelector((state) => state.userData)
   return (
     <div className={css.dashDiv}>
       <div className={css.firstRow}>
         <Card color="#A162F7" bgColor="#242731" aItems="center">
           <img alt="pic" src={light} />
           <span className={css.cardText}>Energy</span>
-          <Progress value={80} />
+          <Progress value={data.energy} />
         </Card>{" "}
         <Card color="#FF7E86" bgColor="#242731" aItems="center">
           <img alt="pic" src={arrow} />
           <span className={css.cardText}>Range</span>
-          <Progress value={80} color="white" />
+          <Progress value={data.range} color="white" />
         </Card>{" "}
         <Card color="#A16295" bgColor="#242731" aItems="center">
           <img alt="pic" src={oil} />
           <span className={css.cardText}>Fluid</span>
-          <Progress value={80} />
+          <Progress value={data.fluid} />
         </Card>{" "}
         <Card color="#F6CC0D" bgColor="#242731" aItems="center">
           <img alt="pic" src={coin} />
           <span className={css.cardText}>Tire Wear</span>
-          <Progress value={80} />
+          <Progress value={data.tireWear} />
         </Card>
       </div>
       <div className={css.firstRow}>
@@ -49,7 +51,7 @@ const DashBoard = () => {
               <button className={css.chartBtn}>Month</button>
             </span>
           </span>
-          <BarGraph />
+          <BarGraph dataX={data.barChartData} />
         </Card>
         <Card color="#242731" bgColor="#242731" maxW="49%" jusC="space-between">
           <span className={css.charText}>
@@ -60,7 +62,7 @@ const DashBoard = () => {
               <button className={css.chartBtn}>Month</button>
             </span>
           </span>
-          <LineChart bColor="rgba(255, 118, 76, 1)" bgColor="rgba(255, 118, 76, 0.5)"/>
+          <LineChart bColor="rgba(255, 118, 76, 1)" bgColor="rgba(255, 118, 76, 0.5)" dataX={data.lineChartData} />
         </Card>
       </div>
       <div className={css.firstRow}>
