@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Style from './Table.module.scss'
 
 
-export default function BasicTable({colTitles,rows}) {
+export default function BasicTable({ colTitles, rows }) {
     return (
         <TableContainer sx={{ backgroundColor: "transparent" }}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -20,7 +20,7 @@ export default function BasicTable({colTitles,rows}) {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row,index) => (
+                    {rows.map((row, index) => (
                         <TableRow
                             key={index}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

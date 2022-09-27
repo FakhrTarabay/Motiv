@@ -13,15 +13,15 @@ import SideMenuBtn from './SideMenuBtn/SideMenuBtn'
 const SideMenu = () => {
   return (
     <div className={Style.SideMenu}>
-      <Logo/>
-      <SideMenuBtn imgSrc={db} text={"Dashboard"} link="/STD"/>
-      <SideMenuBtn imgSrc={assets} text={"Assets"} link="/STA"/>
-      <SideMenuBtn imgSrc={car} text={"Booking"}/>
-      <SideMenuBtn imgSrc={bag} text={"Sell Cars"}/>
-      <SideMenuBtn imgSrc={cart} text={"Buy Cars"}/>
-      <SideMenuBtn imgSrc={fencing} text={"Services"}/>
-      <SideMenuBtn imgSrc={calen} text={"Calender"}/>
-      <SideMenuBtn imgSrc={msg} text={"Messages"}/>
+      <Logo />
+      <SideMenuBtn imgSrc={db} text={"Dashboard"} link="/Dashboard" />
+      <SideMenuBtn imgSrc={assets} text={"Assets"} link="/Assets" />
+      <SideMenuBtn imgSrc={car} text={"Booking"} link="/Booking"/>
+      <SideMenuBtn imgSrc={bag} text={"Sell Cars"} />
+      <SideMenuBtn imgSrc={cart} text={"Buy Cars"} />
+      <SideMenuBtn imgSrc={fencing} text={"Services"} />
+      <SideMenuBtn imgSrc={calen} text={"Calender"} />
+      <SideMenuBtn imgSrc={msg} text={"Messages"} />
     </div>
   );
 };

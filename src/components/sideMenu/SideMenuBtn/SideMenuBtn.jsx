@@ -4,13 +4,10 @@ import { Link } from "react-router-dom";
 
 const SideMenuBtn = ({ imgSrc, text, link }) => {
     return (
-        // <div className={Style.menuItem}>
-
-            <Link className={Style.btn} to={link}>
-                <img alt="ico" src={imgSrc} />
-                {text}
-            </Link>
-        /* </div> */
+        <Link className={Style.btn} to={link}>
+            <img alt="ico" src={imgSrc} />
+            {text}
+        </Link>
     )
 }
 

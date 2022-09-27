@@ -50,7 +50,7 @@ const LineChart = ({ bgColor, bColor, dataX }) => {
     labels,
     datasets: [
       {
-        lineTension: 0.3,
+        lineTension: 0.4,
         fill: true,
         data: dataX,
         borderColor: bColor,

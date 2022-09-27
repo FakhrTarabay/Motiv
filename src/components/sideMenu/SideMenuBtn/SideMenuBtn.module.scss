@@ -8,9 +8,11 @@
     padding: 10px;
     margin: 0px 55px 0px 0px;
     transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
     &:hover {
         background-color: #292e3d;
     }
+
     background-color: transparent;
     @include font(14px, white, 500, 18px);
     border: none;

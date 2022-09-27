@@ -14,14 +14,14 @@ import BasicTable from '../MUI/Table'
 
 
 const Assets = () => {
-  const rows =[
-    ['Urgent Safety Recall',"06/04/2022","08/04/2022","David Demo","Completed"],
-    ['Urgent Safety Recall',"06/04/2022","08/04/2022","David Demo","Completed"],
-];
+  const rows = [
+    ['Urgent Safety Recall', "06/04/2022", "08/04/2022", "David Demo", "Completed"],
+    ['Urgent Safety Recall', "06/04/2022", "08/04/2022", "David Demo", "Completed"],
+  ];
 
 
-const cols = ["Description","Due","Overdue","Notify","Status"]
-  const data = useSelector(state=>state.userData)
+  const cols = ["Description", "Due", "Overdue", "Notify", "Status"]
+  const data = useSelector(state => state.userData)
   const [conds, setconds] = useState({
     ten: false,
     km: false,
@@ -30,7 +30,7 @@ const cols = ["Description","Due","Overdue","Notify","Status"]
     c: false,
   });
 
-  
+
   return (
     <div className={Style.assetsDiv}>
       <div className={Style.title}>Assets</div>
@@ -165,9 +165,9 @@ const cols = ["Description","Due","Overdue","Notify","Status"]
                   style={
                     conds.ten
                       ? {
-                          filter:
-                            "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
-                        }
+                        filter:
+                          "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
+                      }
                       : {}
                   }
                 />
@@ -195,9 +195,9 @@ const cols = ["Description","Due","Overdue","Notify","Status"]
                   style={
                     conds.km
                       ? {
-                          filter:
-                            "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
-                        }
+                        filter:
+                          "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
+                      }
                       : {}
                   }
                 />
@@ -225,9 +225,9 @@ const cols = ["Description","Due","Overdue","Notify","Status"]
                   style={
                     conds.kmm
                       ? {
-                          filter:
-                            "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
-                        }
+                        filter:
+                          "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
+                      }
                       : {}
                   }
                 />
@@ -255,9 +255,9 @@ const cols = ["Description","Due","Overdue","Notify","Status"]
                   style={
                     conds.hr
                       ? {
-                          filter:
-                            "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
-                        }
+                        filter:
+                          "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
+                      }
                       : {}
                   }
                 />
@@ -285,19 +285,19 @@ const cols = ["Description","Due","Overdue","Notify","Status"]
                   style={
                     conds.c
                       ? {
-                          filter:
-                            "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
-                        }
+                        filter:
+                          "invert(51%) sepia(88%) saturate(2008%) hue-rotate(319deg) brightness(104%) contrast(101%)",
+                      }
                       : {}
                   }
                 />
               </span>
-              <button className={Style.chartBtn} style={{textAlign:"left",color:"#FF6370"}}>See All</button>
+              <button className={Style.chartBtn} style={{ textAlign: "left", color: "#FF6370" }}>See All</button>
             </Card>
           </div>
           <Card bgColor="#242731" color="#242731" bShadow="none">
-              <span className={Style.charText}>Reminder </span>
-              <BasicTable colTitles={cols} rows={rows}/>
+            <span className={Style.charText}>Reminder </span>
+            <BasicTable colTitles={cols} rows={rows} />
           </Card>
         </Card>
       </div>

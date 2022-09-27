@@ -21,13 +21,13 @@ const DashBoard = () => {
         <DataCard color="#F6CC0D" bgColor="#242731" aItems="center" text="Tire Wear" data={data.tireWear} imgSrc={coin} />
       </div>
       <div className={Style.Row}>
-        <ChartDisplayCard data={data.barChartData} type="bar" title="Mile Statistics"/>
-        <ChartDisplayCard data={data.lineChartData} type="line" title="Car Statistics"/>
+        <ChartDisplayCard data={data.barChartData} type="bar" title="Mile Statistics" />
+        <ChartDisplayCard data={data.lineChartData} type="line" title="Car Statistics" />
       </div>
       <div className={Style.Row}>
-        <CarDisplayCard data={{name:"Mini Cooper",kms:"132k",rate:"$32/h",percentage:"63%"}} imgSrc={car} bgColor="#E1DFA4"/>
-        <CarDisplayCard data={{name:"Mini Cooper",kms:"132k",rate:"$32/h",percentage:"63%"}} imgSrc={car} bgColor="#E3ECF1"/>
-        <CarDisplayCard data={{name:"Mini Cooper",kms:"132k",rate:"$32/h",percentage:"63%"}} imgSrc={car} bgColor="#F4E3E5"/>
+        <CarDisplayCard data={{ name: "Mini Cooper", kms: "132k", rate: "$32/h", percentage: "63%" }} imgSrc={car} bgColor="#E1DFA4" />
+        <CarDisplayCard data={{ name: "Mini Cooper", kms: "132k", rate: "$32/h", percentage: "63%" }} imgSrc={car} bgColor="#E3ECF1" />
+        <CarDisplayCard data={{ name: "Mini Cooper", kms: "132k", rate: "$32/h", percentage: "63%" }} imgSrc={car} bgColor="#F4E3E5" />
       </div>
     </div>
   );
