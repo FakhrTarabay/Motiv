@@ -13,6 +13,7 @@ const DashBoard = () => {
   const data = useSelector((state) => state.userData)
   return (
     <div className={Style.dashDiv}>
+      <div className={Style.title}>Dashboard</div>
       <div className={Style.Row}>
         <DataCard color="#A162F7" bgColor="#242731" aItems="center" text="Energy" data={data.energy} imgSrc={light} />
         <DataCard color="#FF7E86" bgColor="#242731" aItems="center" text="Range" data={data.range} imgSrc={arrow} />

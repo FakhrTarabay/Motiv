@@ -15,18 +15,18 @@ export default function BasicTable({colTitles,rows}) {
                 <TableHead>
                     <TableRow>
                         {colTitles.map(title => {
-                            return <TableCell ><span className={Style.tableCol}>{title}</span></TableCell>
+                            return <TableCell key={title} ><span className={Style.tableCol}>{title}</span></TableCell>
                         })}
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
+                    {rows.map((row,index) => (
                         <TableRow
-                            key={row.name}
+                            key={index}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             {row.map(value => {
-                                return <TableCell><span className={Style.tableItem}>{value}</span></TableCell>
+                                return <TableCell key={value}><span className={Style.tableItem}>{value}</span></TableCell>
                             })}
                         </TableRow>
                     ))}

@@ -4,7 +4,7 @@ const ChartBtns = ({ btns }) => {
     return (
         <span className={Style.chartBtnRow}>
             {btns.map(btn => {
-                return <button className={Style.chartBtn}>{btn}</button>
+                return <button key={btn} className={Style.chartBtn}>{btn}</button>
             })}
         </span>
     )

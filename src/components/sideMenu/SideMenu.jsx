@@ -14,8 +14,8 @@ const SideMenu = () => {
   return (
     <div className={Style.SideMenu}>
       <Logo/>
-      <SideMenuBtn imgSrc={db} text={"Dashboard"}/>
-      <SideMenuBtn imgSrc={assets} text={"Assets"}/>
+      <SideMenuBtn imgSrc={db} text={"Dashboard"} link="/STD"/>
+      <SideMenuBtn imgSrc={assets} text={"Assets"} link="/STA"/>
       <SideMenuBtn imgSrc={car} text={"Booking"}/>
       <SideMenuBtn imgSrc={bag} text={"Sell Cars"}/>
       <SideMenuBtn imgSrc={cart} text={"Buy Cars"}/>
