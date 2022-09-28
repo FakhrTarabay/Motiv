@@ -1,8 +1,8 @@
 import React from 'react'
 import Style from '../Pages/Pages.module.scss'
-import Assets from '../components/Assets/Assets'
-import Top from '../components/Top/Top'
-import SideMenu from '../components/SideMenu/SideMenu'
+import Assets from '../Components/Assets/Assets'
+import Top from '../Components/Top/Top'
+import SideMenu from '../Components/SideMenu/SideMenu'
 const STA = () => {
     return (
         <div className={Style.App}>

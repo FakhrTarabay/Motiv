@@ -1,31 +1,20 @@
 import React from "react";
 import Style from "./Title.module.scss";
+import {Link } from "react-router-dom";
 
-const Title = ({ isUp, setIsuP }) => {
+const Title = ({title,text,question,link}) => {
   return (
     <div className={Style.title}>
-      <h1>Get's started.</h1>
-      {isUp ? (
-        <span className={Style.reg}>
-          Already have an account?
-          <span className={Style.med}>
-            <a href="#temp" className={Style.a} onClick={() => setIsuP(!isUp)}>
-              {" "}
-              Sign in
-            </a>
-          </span>
+      <h1>{title}</h1>
+      <span className={Style.reg}>
+        {question}
+        <span className={Style.med}>
+          <Link className={Style.a} push to={link}>
+            {" "}
+            {text}
+          </Link>
         </span>
-      ) : (
-        <span className={Style.reg}>
-          Don't have an account?
-          <span className={Style.med}>
-            <a href="#temp" className={Style.a} onClick={() => setIsuP(!isUp)}>
-              {" "}
-              Sign up
-            </a>
-          </span>
-        </span>
-      )}
+      </span>
     </div>
   );
 };

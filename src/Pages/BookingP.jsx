@@ -1,8 +1,8 @@
 import React from 'react'
 import Style from '../Pages/Pages.module.scss'
-import Booking from '../components/Booking/Booking'
-import Top from '../components/Top/Top'
-import SideMenu from '../components/SideMenu/SideMenu'
+import Booking from '../Components/Booking/Booking'
+import Top from '../Components/Top/Top'
+import SideMenu from '../Components/SideMenu/SideMenu'
 const BookingP = () => {
     return (
         <div className={Style.App}>
