@@ -16,3 +16,23 @@
     @include font(20px, #1F2128, 700, 26.04px);
 
 }
+
+.carTextBooking {
+    @include flex(row, space-between, center);
+    @include font(18px, white, 700, 23.44px);
+    width: 100%;
+    gap: 10px;
+}
+.carTextBookingBot{
+    @extend .carTextBooking;
+    @include flex(row, normal, center);
+}
+
+.carSTextBooking {
+    @include font(14px, #72767C, 500, 18px);
+}
+
+.carTextBBooking {
+    @include font(16px, #72767C, 400, 21px);
+
+}
