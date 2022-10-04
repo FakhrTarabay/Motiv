@@ -14,7 +14,6 @@
   cursor: pointer;
   transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   @include font(15px, white, 700, 13px);
-
   &:hover {
     background-color: #a4c8f8;
   }
