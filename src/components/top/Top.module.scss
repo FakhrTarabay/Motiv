@@ -32,4 +32,8 @@
 
 .notif,.avatar{
     cursor: pointer;
+    text-decoration: none;
+    &:visited{
+      text-decoration: none;
+    }
 }

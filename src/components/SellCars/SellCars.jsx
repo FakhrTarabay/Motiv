@@ -43,7 +43,7 @@ const SellCars = () => {
           <span className={Style.text}>market avarage is $16,224</span>
           <span>
             <button className={Style.btn}>
-              <img src={sArrow} />
+              <img src={sArrow} alt="arrow"/>
             </button>
           </span>
         </div>
@@ -84,7 +84,7 @@ const SellCars = () => {
           <span className={Style.text}>market avarage is $16,224</span>
           <span>
             <button className={Style.btn}>
-              <img src={sArrow} />
+              <img src={sArrow} alt="arrow"/>
             </button>
           </span>
         </div>
