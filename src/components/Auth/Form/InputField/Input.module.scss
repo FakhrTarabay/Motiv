@@ -1,8 +1,7 @@
 @import "../../../sass/sass.scss";
 
 .bg {
-  @include flex(column, flex-start, none);
-  box-shadow: 0px 10px 110px 1px rgba(59, 59, 59, 0.08);
+  @include flex(column, flex-start, normal);
   border-radius: 10px;
   margin-top: 10px;
   padding: 20px;
