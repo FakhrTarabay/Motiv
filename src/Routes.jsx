@@ -5,7 +5,7 @@ import SignUp from './Components/Auth/SignUp'
 import STA from './Pages/STA'
 import STD from './Pages/STD'
 import BookingP from './Pages/BookingP'
-
+import SellingP from './Pages/SellingP'
 const RoutesX = () => {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ const RoutesX = () => {
             <Route exact={true} path={'/Dashboard'} element={<STD/>}/>
             <Route exact={true} path={'/Booking'} element={<BookingP/>}/>
             <Route exact={true} path={'/Login'} element={<SignIn/>}/>
+            <Route exact={true} path={'/Selling'} element={<SellingP/>}/>
         </Routes>
       </BrowserRouter>
   )

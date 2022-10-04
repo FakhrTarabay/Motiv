@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Style from "./Card.module.scss";
-const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, gap, bShadow }) => {
+const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, gap, bShadow, type="column" }) => {
   const [hover, setHover] = useState(false);
   return (
     <div
@@ -8,6 +8,7 @@ const Card = ({ children, color, maxH, bgColor, aItems, maxW, jusC, grow, pad, g
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
+        flexDirection:type,
         gap:gap,
         padding:pad,
         backgroundColor: hover ? color : bgColor,

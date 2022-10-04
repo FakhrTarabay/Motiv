@@ -17,7 +17,7 @@ const SideMenu = () => {
       <SideMenuBtn imgSrc={db} text={"Dashboard"} link="/Dashboard" />
       <SideMenuBtn imgSrc={assets} text={"Assets"} link="/Assets" />
       <SideMenuBtn imgSrc={car} text={"Booking"} link="/Booking"/>
-      <SideMenuBtn imgSrc={bag} text={"Sell Cars"} />
+      <SideMenuBtn imgSrc={bag} text={"Sell Cars"} link="/Selling"/>
       <SideMenuBtn imgSrc={cart} text={"Buy Cars"} />
       <SideMenuBtn imgSrc={fencing} text={"Services"} />
       <SideMenuBtn imgSrc={calen} text={"Calender"} />

@@ -1,0 +1,49 @@
+@import "../sass/sass.scss";
+
+.SellingDiv {
+  @include rest;
+}
+
+.Row {
+  @include flex(row, center, normal);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title {
+  @include font(30px, white, 700, 39px);
+}
+
+.carName {
+  @include font(30px, white, 700, 39px);
+}
+
+.offerCol {
+  @include flex(column, space-around, normal);
+  gap:5px;
+}
+
+.text {
+  @include font(12px, #E0E4E7, 500, 16px);
+}
+.textP {
+  @include font(14px, #E0E4E7, 700, 18px);
+}
+
+.cTextW {
+  @include font(20px, #FFFFFF, 700, 26px);
+}
+
+.cTextG {
+  @include font(12px, #7C7C8D, 500, 15.62px);
+}
+
+.cText1 {
+  @include font(20px, #407EF9, 700, 26px);
+}
+.cText2 {
+  @include font(20px, #FF6370, 700, 26px);
+}
+.cText3 {
+  @include font(20px, #A162F7, 700, 26px);
+}

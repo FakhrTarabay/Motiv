@@ -6,9 +6,9 @@ import LineChart from "../General/Charts/LineChart";
 import ChartBtns from "./ChartBtns/ChartBtns";
 
 
-const ChartDisplayCard = ({type,title,data}) => {
+const ChartDisplayCard = ({type,title,data,maxW}) => {
     return (
-        <Card color="#242731" bgColor="#242731" jusC="space-between">
+        <Card color="#242731" bgColor="#242731" jusC="space-between" maxW={maxW}>
             <span className={Style.charText}>
                 {title}
                 <ChartBtns btns={["Day", "Week", "Month"]} />

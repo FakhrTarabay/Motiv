@@ -21,7 +21,7 @@ const CarDisplayCard = ({
     <Card
       bgColor={bgColor}
       color={bgColor}
-      aItems={"flex-start"}
+      aItems="flex-start"
       jusC={cond ? "flex-start" : "space-between"}
     >
       {cond ? (
