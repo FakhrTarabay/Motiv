@@ -23,7 +23,7 @@ const SellCars = () => {
           aItems="flex-start"
           jusC="flex-start"
         >
-          <span className={Style.carName}>Mercedes</span>
+          <span className={Style.carName}>Audi</span>
           <img width="100%" alt="pic" src={car} />
         </Card>
         <ChartDisplayCard
