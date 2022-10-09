@@ -1,8 +1,8 @@
 @mixin font($size,$color,$weight,$height){
-    font-size: $size;
-    line-height: $height;
-    font-weight: $weight;
-    color:$color;
+    font-size: $size!important;
+    line-height: $height!important;
+    font-weight: $weight!important;
+    color:$color!important;
 }
 
 @mixin flex($dir,$jus,$align){

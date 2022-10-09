@@ -2,7 +2,7 @@
 
 
 .logo {
-    @include flex(row, center, center);
+    @include flex(row, normal, center);
     margin-bottom: 30px;
   }
   .title {

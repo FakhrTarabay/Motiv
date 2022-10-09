@@ -1,0 +1,49 @@
+@import "../sass/sass.scss";
+
+.CalendarDiv {
+  @include rest;
+}
+
+.Row {
+  @include flex(row, normal, normal);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title {
+  @include font(30px, white, 700, 39px);
+}
+
+.col {
+  @include flex(column, normal, normal);
+}
+.col1 {
+  @extend .col;
+  max-width: 40%;
+}
+.col2 {
+  @extend .col;
+  flex: 1;
+}
+
+.rCal {
+  border-radius: 20px;
+  background-color: transparent !important;
+  border: none !important;
+  @include font(16px, white, 700, 20px);
+  abbr {
+    text-decoration: none !important;
+  }
+  button {
+    @include font(16px, white, 700, 20px);
+    border-radius: 999px;
+    background-color: transparent;
+  }
+  button:enabled:focus,
+  button:enabled:active {
+    background-color: #ff6370;
+  }
+  button:enabled:hover {
+    background-color: #ff63706c;
+  }
+}
