@@ -8,7 +8,7 @@ import BookingP from './Pages/BookingP'
 import SellingP from './Pages/SellingP'
 import CalendarP from './Pages/CalendarP'
 import SettingsP from './Pages/SettingsP'
-
+import MessagesP from './Pages/MessagesP'
 const RoutesX = () => {
   return (
     <BrowserRouter>
@@ -21,6 +21,7 @@ const RoutesX = () => {
             <Route exact={true} path={'/Selling'} element={<SellingP/>}/>
             <Route exact={true} path={'/Calendar'} element={<CalendarP/>}/>
             <Route exact={true} path={'/Settings'} element={<SettingsP/>}/>
+            <Route exact={true} path={'/Messages'} element={<MessagesP/>}/>
         </Routes>
       </BrowserRouter>
   )

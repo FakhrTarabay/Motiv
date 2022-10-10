@@ -20,9 +20,9 @@ const SideMenu = () => {
         <SideMenuBtn imgSrc={assets} text={"Assets"} link="/Assets" />
         <SideMenuBtn imgSrc={car} text={"Booking"} link="/Booking" />
         <SideMenuBtn imgSrc={bag} text={"Sell Cars"} link="/Selling" />
-        <SideMenuBtn imgSrc={fencing} text={"Services"} />
+        <SideMenuBtn imgSrc={fencing} text={"Services"} link="/Services"/>
         <SideMenuBtn imgSrc={calen} text={"Calender"} link="/Calendar" />
-        <SideMenuBtn imgSrc={msg} text={"Messages"} />
+        <SideMenuBtn imgSrc={msg} text={"Messages"} link="/Messages" />
       </div>
       <span>
         <SideMenuBtn imgSrc={settings} text={"Settings"} link="/Settings" />

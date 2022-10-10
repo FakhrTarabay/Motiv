@@ -1,0 +1,65 @@
+@import "../sass/sass.scss";
+
+.MessagesDiv {
+  @include rest;
+  height: 100%;
+}
+.messageCol {
+  display: flex;
+  flex-direction: column;
+  max-height: 344px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding-right: 10px;
+}
+.Row {
+  @include flex(row, normal, flex-end);
+  gap: 20px;
+}
+
+.title {
+  @include font(30px, white, 700, 39px);
+}
+.msgInput {
+  @include flex(row, flex-start, center);
+  @include font(16px, #ffffff, 500, 21px);
+  padding: 10px;
+  background: #2b2e38;
+  border: 1px solid #333848;
+  border-radius: 10px;
+  &:focus {
+    outline: 0px;
+  }
+}
+
+.btn {
+  @include flex(row, normal, center);
+  @include font(14px, white, 500, 18px);
+  border-radius: 30px;
+  padding: 10px;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background-color: #292e3d3e;
+  border: none;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    background-color: #292e3d;
+  }
+}
+
+.msg2 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  div {
+    max-width: 70%;
+    padding: 10px 14px;
+    background: #2b2e38;
+    border-radius: 10px 0px 10px 10px;
+    span {
+      @include font(13px, #e0e4e7, 400, 20px);
+    }
+  }
+}

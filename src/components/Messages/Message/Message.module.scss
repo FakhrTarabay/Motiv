@@ -1,0 +1,36 @@
+@import "../../sass/sass.scss";
+
+.msg {
+  display: flex;
+  gap: 10px;
+  .msgDiv {
+    max-width: 70%;
+    padding: 10px 14px;
+    background-color: #a162f7;
+    span {
+      @include font(13px, #e0e4e7, 400, 20px);
+    }
+  }
+  span {
+    color: #7c7c8d;
+  }
+}
+.msgRec {
+  @extend .msg;
+  .msgDiv {
+    background: #2b2e38;
+    border-radius: 0px 10px 10px 10px;
+  }
+}
+
+.msgSent {
+  @extend .msg;
+  flex-direction: row-reverse;
+  .msgDiv {
+    border-radius: 10px 0px 10px 10px;
+  }
+}
+
+.text {
+  word-break: break-all;
+}

@@ -15,7 +15,6 @@
 @mixin rest{
     display: flex;
     flex-direction: column;
-    height: 88vh;
     overflow-y: scroll;
     scrollbar-width: thin;
     scroll-behavior: smooth;

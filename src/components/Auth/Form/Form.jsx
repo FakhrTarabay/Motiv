@@ -14,7 +14,7 @@ const Form = ({ isUp,link,fun }) => {
       className={Style.formDiv}
       onSubmit={(e) => {
         e.preventDefault();
-        fun();
+        // fun();
         setRouting(true);
       }}
     >
