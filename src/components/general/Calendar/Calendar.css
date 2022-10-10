@@ -28,7 +28,7 @@
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
-thead {
+.fc thead {
   background: #2884ff;
   display: flex;
   flex-direction: row;
@@ -65,15 +65,7 @@ thead {
 .fc .fc-timegrid-divider {
   display: none;
 }
-table {
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-}
+
 .fc-v-event .fc-event-title{
   max-height: unset;
-}
-tr{
-  /* display: flex; */
-  min-height: 100%;
-  /* flex-direction: row; */
 }

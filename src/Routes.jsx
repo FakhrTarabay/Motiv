@@ -9,6 +9,7 @@ import SellingP from './Pages/SellingP'
 import CalendarP from './Pages/CalendarP'
 import SettingsP from './Pages/SettingsP'
 import MessagesP from './Pages/MessagesP'
+import ServicesP from './Pages/ServicesP'
 const RoutesX = () => {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ const RoutesX = () => {
             <Route exact={true} path={'/Calendar'} element={<CalendarP/>}/>
             <Route exact={true} path={'/Settings'} element={<SettingsP/>}/>
             <Route exact={true} path={'/Messages'} element={<MessagesP/>}/>
+            <Route exact={true} path={'/Services'} element={<ServicesP/>}/>
         </Routes>
       </BrowserRouter>
   )

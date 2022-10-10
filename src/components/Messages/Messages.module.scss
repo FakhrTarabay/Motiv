@@ -7,8 +7,9 @@
 .messageCol {
   display: flex;
   flex-direction: column;
-  max-height: 344px;
-  overflow-y: auto;
+  max-height: 326px;
+  height: 100%;
+  overflow-y: scroll;
   scrollbar-width: thin;
   scroll-behavior: smooth;
   gap: 10px;
@@ -21,17 +22,6 @@
 
 .title {
   @include font(30px, white, 700, 39px);
-}
-.msgInput {
-  @include flex(row, flex-start, center);
-  @include font(16px, #ffffff, 500, 21px);
-  padding: 10px;
-  background: #2b2e38;
-  border: 1px solid #333848;
-  border-radius: 10px;
-  &:focus {
-    outline: 0px;
-  }
 }
 
 .btn {
@@ -61,5 +51,38 @@
     span {
       @include font(13px, #e0e4e7, 400, 20px);
     }
+  }
+}
+.msgInputB {
+  border: 1px solid #323745;
+  @include flex(row, normal, center);
+  background-color: #1f2128;
+  border-radius: 8px;
+  padding: 0px 14px;
+  gap: 10px;
+}
+
+.msgInput {
+  @include flex(row, flex-start, center);
+  @include font(16px, #7c7c8d, 500, 21px);
+  caret-color: #a162f7;
+  width: 100%;
+  padding: 10px;
+  background: #1f2128;
+  border: 0px;
+  border-radius: 10px;
+  &:focus {
+    outline: 0px;
+  }
+}
+
+.sendBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.089);
   }
 }

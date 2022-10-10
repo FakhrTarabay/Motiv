@@ -1,6 +1,6 @@
 @import '../../sass/sass.scss';
 .Card {
-    @include flex(column,space-around,none);
+    @include flex(column,space-around,normal);
     border-radius: 14px;
     padding: 30px 60px;
     gap:5px;
