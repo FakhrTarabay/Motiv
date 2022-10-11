@@ -8,49 +8,22 @@ import call from "../svg/call.svg";
 import Message from "./Message/Message";
 import send from "../svg/send.svg";
 import attach from "../svg/attach.svg";
-
+import { useSelector,useDispatch } from "react-redux";
+import { setMsgs } from "../../Store/userStateSlice";
 const Messages = () => {
-  const [data, setData] = useState({})
-  const contacts = [
-    {
-      img: "o",
-      name: "Omar Khas",
-      status: "Online",
-      time: "4:30",
-      notif: "3",
-    },
-    {
-      img: "s",
-      name: "Ahmad",
-      status: "Online",
-      time: "8:30",
-      notif: "1",
-    },
-  ];
+  const dispatch = useDispatch()
+  const contacts = useSelector((state) => state.userData.contacts);
+  const msgs = useSelector((state) => state.userData.Msgs);
+  const [data, setData] = useState(contacts[0])
+  const [msg, setMsg] = useState("");
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     var objDiv = document.getElementById("test");
     objDiv.scrollTop = objDiv.scrollHeight;
   });
 
-  const [msg, setMsg] = useState("");
-  const [search, setSearch] = useState("");
-  const [msgs, setMsgs] = useState([
-    {
-      img: "s",
-      text: "Hi, I hope you are doing well, yesterday you have gave a pen This very nice, i am very happy for this.yesterday you have gave a pen This very nice",
-      time: "2:30",
-      type: "rec",
-      sender: "Ahmad"
-    },
-    {
-      img: "sadas",
-      text: "yea Im well, Thank you, i am very happy for this.yesterday you have gave a pen This very nice",
-      time: "2:30",
-      type: "sent",
-      to: "Ahmad"
-    },
 
-  ]);
 
   function handleSend() {
     const current = new Date();
@@ -65,8 +38,7 @@ const Messages = () => {
       type: "sent",
       to: data.name
     };
-
-    setMsgs((prev) => [...prev, t]);
+    dispatch(setMsgs(t));
     setMsg("");
   }
 
@@ -91,7 +63,7 @@ const Messages = () => {
               ) {
                 return <ContactChip setData={setData} data={contact} key={index} />;
               }
-              return <div></div>;
+              return <div key={index}></div>;
             })}
           </div>
         </Card>
@@ -124,7 +96,7 @@ const Messages = () => {
               if (elem.sender === data.name || elem.to === data.name) {
                 return <Message key={index} data={elem} />;
               }
-              return <div></div>
+              return <div key={index}></div>
             })}
           </div>
           <div className={Style.msgInputB}>
