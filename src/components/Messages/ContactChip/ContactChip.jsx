@@ -1,9 +1,9 @@
 import React from "react";
 import Style from "./ContactChip.module.scss";
 import Avatar from "@mui/material/Avatar";
-const ContactChip = ({dis,data:{name,time,status,notif,img}}) => {
+const ContactChip = ({dis,data:{name,time,status,notif,img},setData}) => {
   return (
-    <button className={Style.ContactChip}>
+    <button className={Style.ContactChip} onClick={()=>setData({name,time,status,notif,img})}>
       <Avatar
         alt={name}
         src={img}

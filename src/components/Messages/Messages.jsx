@@ -10,6 +10,7 @@ import send from "../svg/send.svg";
 import attach from "../svg/attach.svg";
 
 const Messages = () => {
+  const [data, setData] = useState({})
   const contacts = [
     {
       img: "o",
@@ -20,7 +21,7 @@ const Messages = () => {
     },
     {
       img: "s",
-      name: "Shaza",
+      name: "Ahmad",
       status: "Online",
       time: "8:30",
       notif: "1",
@@ -35,17 +36,20 @@ const Messages = () => {
   const [search, setSearch] = useState("");
   const [msgs, setMsgs] = useState([
     {
-      img: "sadas",
-      text: "yea Im well, Thank you, i am very happy for this.yesterday you have gave a pen This very nice",
-      time: "2:30",
-      type: "sent",
-    },
-    {
       img: "s",
       text: "Hi, I hope you are doing well, yesterday you have gave a pen This very nice, i am very happy for this.yesterday you have gave a pen This very nice",
       time: "2:30",
       type: "rec",
+      sender: "Ahmad"
     },
+    {
+      img: "sadas",
+      text: "yea Im well, Thank you, i am very happy for this.yesterday you have gave a pen This very nice",
+      time: "2:30",
+      type: "sent",
+      to: "Ahmad"
+    },
+
   ]);
 
   function handleSend() {
@@ -59,6 +63,7 @@ const Messages = () => {
       text: msg,
       time: time.substring(1),
       type: "sent",
+      to: data.name
     };
 
     setMsgs((prev) => [...prev, t]);
@@ -80,11 +85,11 @@ const Messages = () => {
           <div className={Style.messageCol} style={{ maxHeight: "350px" }}>
             {contacts.map((contact, index) => {
               if (search === "") {
-                return <ContactChip data={contact} key={index}/>;
+                return <ContactChip setData={setData} data={contact} key={index} />;
               } else if (
                 contact.name.toLowerCase().includes(search.toLowerCase())
               ) {
-                return <ContactChip data={contact} key={index}/>;
+                return <ContactChip setData={setData} data={contact} key={index} />;
               }
               return <div></div>;
             })}
@@ -99,13 +104,7 @@ const Messages = () => {
             }}
           >
             <ContactChip
-              data={{
-                img: "s",
-                name: "Shaza",
-                status: "Online",
-                time: "8:30",
-                notif: "1",
-              }}
+              data={data}
               dis="none"
             />
             <span style={{ display: "flex", gap: "10px", padding: "0px 10px" }}>
@@ -122,7 +121,10 @@ const Messages = () => {
           </div>
           <div className={Style.messageCol} id="test">
             {msgs.map((elem, index) => {
-              return <Message key={index} data={elem} />;
+              if (elem.sender === data.name || elem.to === data.name) {
+                return <Message key={index} data={elem} />;
+              }
+              return <div></div>
             })}
           </div>
           <div className={Style.msgInputB}>
