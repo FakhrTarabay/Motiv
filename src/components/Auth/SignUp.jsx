@@ -35,9 +35,9 @@ const SignUp = () => {
           question="Already have an account"
           link="/Login"
         />
-        <SocialBtns />
+        <SocialBtns/>
         <DividerX />
-        <Form fun={handleSignUp} isUp={true} link="/Login" />
+        <Form isUp={true} link="/Login" />
       </div>
     </div>
   );
