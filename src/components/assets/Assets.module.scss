@@ -8,39 +8,7 @@
   @include font(30px, white, 700, 39px);
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 2%;
-}
-.rowS {
-  @extend .row;
-  gap: 22%;
-}
-
-.rowA{
-  @extend .row;
-  align-items: center;
-}
-.col {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.carPic {
-  align-self: center;
-}
-
-.sTextW {
-  @include font(13px, white, 500, 17px);
-  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.sTextG {
-  @include font(16px, #808191, 500, 21px);
-}
-
-.charText {
+.Text {
   @include font(20px, #ffffff, 700, 26px);
   display: flex;
   flex-direction: row;
@@ -48,26 +16,7 @@
   align-items: center;
 }
 
-.chartBtn {
-  background-color: transparent;
-  border-radius: 7px;
-  padding: 8px 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  @include font(12px, #7C7C8D, 500, 16px);
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.099);
-  }
-}
-
-.chartBtnRow {
-  margin: 10px 0px;
-  @include flex(row, flex-start, center);
-  gap: 18px;
-}
-
-.firstRow {
-  @include flex(row, center, none);
+.row {
+  display: flex;
   gap: 20px;
 }

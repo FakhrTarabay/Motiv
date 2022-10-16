@@ -8,55 +8,59 @@ const initialState = {
   barChartData: [134, 173, 112, 190, 134, 219, 163],
   lineChartData: [14, 13, 112, 190, 14, 21, 63],
   AssetsLineChart: [141, 131, 1121, 1901, 141, 211, 613],
-  Msgs: [{
-    img: "s",
-    text: "Hi, I hope you are doing well, yesterday you have gave a pen This very nice, i am very happy for this.yesterday you have gave a pen This very nice",
-    time: "2:30",
-    type: "rec",
-    sender: "Ahmad"
-  },
-  {
-    img: "sadas",
-    text: "yea Im well, Thank you, i am very happy for this.yesterday you have gave a pen This very nice",
-    time: "2:30",
-    type: "sent",
-    to: "Ahmad"
-  },],
-  contacts: [{
-    img: "o",
-    name: "Omar Khas",
-    status: "Online",
-    time: "4:30",
-    notif: "3",
-  },
-  {
-    img: "o",
-    name: "Marc",
-    status: "Online",
-    time: "4:30",
-    notif: "3",
-  },
-  {
-    img: "o",
-    name: "Adham",
-    status: "Online",
-    time: "4:30",
-    notif: "3",
-  },
-  {
-    img: "o",
-    name: "Ali",
-    status: "Online",
-    time: "4:30",
-    notif: "3",
-  },
-  {
-    img: "s",
-    name: "Ahmad",
-    status: "Online",
-    time: "8:30",
-    notif: "1",
-  }],
+  Msgs: [
+    {
+      img: "s",
+      text: "Hi, I hope you are doing well, yesterday you have gave a pen This very nice, i am very happy for this.yesterday you have gave a pen This very nice",
+      time: "2:30",
+      type: "rec",
+      sender: "Ahmad",
+    },
+    {
+      img: "sadas",
+      text: "yea Im well, Thank you, i am very happy for this.yesterday you have gave a pen This very nice",
+      time: "2:30",
+      type: "sent",
+      to: "Ahmad",
+    },
+  ],
+  contacts: [
+    {
+      img: "o",
+      name: "Omar Khas",
+      status: "Online",
+      time: "4:30",
+      notif: "3",
+    },
+    {
+      img: "o",
+      name: "Marc",
+      status: "Online",
+      time: "4:30",
+      notif: "3",
+    },
+    {
+      img: "o",
+      name: "Adham",
+      status: "Online",
+      time: "4:30",
+      notif: "3",
+    },
+    {
+      img: "o",
+      name: "Ali",
+      status: "Online",
+      time: "4:30",
+      notif: "3",
+    },
+    {
+      img: "s",
+      name: "Ahmad",
+      status: "Online",
+      time: "8:30",
+      notif: "1",
+    },
+  ],
   cars: [
     {
       name: "Mini",
@@ -140,16 +144,32 @@ const initialState = {
       passengers: 4,
     },
   ],
+  tableRows: [
+    [
+      "Urgent Safety Recall",
+      "06/04/2022",
+      "08/04/2022",
+      "David Demo",
+      "Completed",
+    ],
+    [
+      "Urgent Safety Recall",
+      "06/04/2022",
+      "08/04/2022",
+      "David Demo",
+      "Completed",
+    ],
+  ],
 };
 
 export const userDataReducer = createSlice({
   name: "userData",
   initialState,
   reducers: {
-    setMsgs:(state,{payload})=>{
-      state.Msgs = [...state.Msgs,payload]
+    setMsgs: (state, { payload }) => {
+      state.Msgs = [...state.Msgs, payload];
     },
-    handleSend:(state,{payload})=>{
+    handleSend: (state, { payload }) => {
       const current = new Date();
       const time = current.toLocaleTimeString("en-US", {
         hour: "2-digit",
@@ -160,12 +180,12 @@ export const userDataReducer = createSlice({
         text: payload.msg,
         time: time.substring(1),
         type: "sent",
-        to: payload.name
+        to: payload.name,
       };
       setMsgs(t);
-    }
+    },
   },
 });
 
-export const { setMsgs} = userDataReducer.actions
+export const { setMsgs } = userDataReducer.actions;
 export default userDataReducer.reducer;
