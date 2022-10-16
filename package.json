@@ -1,7 +1,7 @@
 {
   "name": "motiv",
   "version": "0.1.0",
-  "homepage": "https://fakhrtarabay.github.io/Motiv",
+  "homepage": "https://fakhrtarabay.github.io/Motiv-Ejada",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
