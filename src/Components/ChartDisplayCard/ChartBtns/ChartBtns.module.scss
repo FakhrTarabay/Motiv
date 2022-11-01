@@ -1,0 +1,20 @@
+@import "../../sass/sass.scss";
+
+.chartBtnRow {
+  margin: 10px 0px;
+  @include flex(row, flex-start, center);
+  gap: 18px;
+}
+
+.chartBtn {
+  background-color: #2884FF;
+  border-radius: 15px;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  @include font(15px, white, 700, 13px);
+  &:hover {
+    background-color: #a4c8f8;
+  }
+}

@@ -1,0 +1,23 @@
+@mixin font($size,$color,$weight,$height){
+    font-size: $size!important;
+    line-height: $height!important;
+    font-weight: $weight!important;
+    color:$color!important;
+}
+
+@mixin flex($dir,$jus,$align){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $align;
+}
+
+@mixin rest{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    padding: 20px;
+    gap: 24px;
+}

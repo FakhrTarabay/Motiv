@@ -1,0 +1,25 @@
+@import "../../../sass/sass.scss";
+
+.bg {
+  @include flex(column, flex-start, normal);
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #242731;
+  label {
+    @include font(16px, #ffffff, 500, 21px);
+    padding: 12px 0px;
+  }
+  input {
+    @include flex(row, flex-start, center);
+    @include font(16px, #ffffff, 500, 21px);
+    width: 100%;
+    border-radius: 10px;
+    background-color: inherit;
+    padding: 19px 21px 19px 20px;
+    border: 2px solid #323745;
+    &:focus {
+      outline: 2px solid #a162f7;
+    }
+  }
+}

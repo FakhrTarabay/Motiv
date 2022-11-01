@@ -1,0 +1,49 @@
+@import "../../sass/sass.scss";
+
+.offerCol {
+    @include flex(column, space-around, normal);
+    gap: 15px;
+  }
+  
+  .text {
+    @include font(12px, #e0e4e7, 500, 16px);
+  }
+  .textP {
+    @include font(14px, #e0e4e7, 700, 18px);
+  }
+  
+  .cTextW {
+    @include font(20px, #ffffff, 700, 26px);
+  }
+  
+  .cTextG {
+    @include font(12px, #7c7c8d, 500, 15.62px);
+  }
+  
+  .cText1 {
+    @include font(20px, #A162F7, 700, 26px);
+  }
+  .cText2 {
+    @include font(20px, #70CF97, 700, 26px);
+  }
+  .cText3 {
+    @include font(20px, #F6CC0D, 700, 26px);
+  }
+  .cText4 {
+    @include font(20px, #FF764C, 700, 26px);
+  }
+  
+  .btn {
+    padding: 0px 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    @include font(15px, white, 700, 13px);
+    &:hover {
+      opacity: 80%;
+    }
+    background: #ff6370;
+    box-shadow: 0px 1px 2px rgba(252, 189, 189, 0.25);
+    border-radius: 10px;
+  }
+  
