@@ -1,6 +1,10 @@
 {
   "name": "motiv",
   "version": "0.1.0",
+<<<<<<< HEAD
+=======
+  "homepage": "https://fakhrtarabay.github.io/Motiv",
+>>>>>>> f0ce9a39494302abd0804dd17d787922b79b1502
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
