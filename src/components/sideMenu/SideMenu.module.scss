@@ -1,8 +1,0 @@
-@import "../sass/sass.scss";
-
-.SideMenu {
-  background-color: #242731;
-  @include flex(column, space-between, flex-start);
-  padding: 30px 24px;
-  gap: 3px;
-}

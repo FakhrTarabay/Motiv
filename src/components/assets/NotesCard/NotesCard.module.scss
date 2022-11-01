@@ -1,9 +1,0 @@
-@import "../../sass/sass.scss";
-
-.Text {
-  @include font(20px, #ffffff, 700, 26px);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
