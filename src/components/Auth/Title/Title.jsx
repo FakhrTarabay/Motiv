@@ -9,7 +9,7 @@ const Title = ({title,text,question,link}) => {
       <span className={Style.reg}>
         {question}
         <span className={Style.med}>
-          <Link className={Style.a} push to={link}>
+          <Link className={Style.a} to={link}>
             {" "}
             {text}
           </Link>
